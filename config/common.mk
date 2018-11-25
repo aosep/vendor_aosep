@@ -98,6 +98,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX
 
+# JamesDSP
+PRODUCT_PACKAGES += \
+   libjamesdsp    
+
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     Calculator \
