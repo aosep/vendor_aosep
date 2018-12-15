@@ -65,6 +65,9 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_COPY_FILES +=  \
 #    vendor/validus/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
+PRODUCT_COPY_FILES += \
+    vendor/validus/prebuilt/common/etc/permissions/privapp-permissions-omnijaws.xml:system/etc/permissions/privapp-permissions-omnijaws.xml
+
 # Fonts packages
 PRODUCT_PACKAGES += \
     validus-fonts
@@ -221,4 +224,3 @@ EXTENDED_POST_PROCESS_PROPS := vendor/validus/tools/validus_process_props.py
 
 # Themes
 include vendor/validus/config/themes.mk
-
