@@ -6,8 +6,7 @@ function validus_device_combos()
 
     T="$(gettop)"
     list_file="${T}/vendor/validus/validus.devices"
-    variant1="userdebug"
-    variant2="user"
+    variant="userdebug"
 
     if [[ $1 ]]
     then
@@ -34,8 +33,7 @@ function validus_device_combos()
 
     while IFS= read -r device
     do
-        add_lunch_combo "validus_${device}-${variant1}"
-        add_lunch_combo "validus_${device}-${variant2}"
+        add_lunch_combo "validus_${device}-${variant}"
     done < "${list_file}"
 }
 
