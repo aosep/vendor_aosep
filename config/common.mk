@@ -98,6 +98,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX
 
+# DSPManager
+PRODUCT_PACKAGES += \
+    DSPManager
+    
 # JamesDSP
 PRODUCT_PACKAGES += \
    libjamesdsp    
