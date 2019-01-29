@@ -111,7 +111,8 @@ PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
     BluetoothExt \
-    Launcher3Dark
+    Launcher3Dark \
+    SubstratumKey
 
 
 # Extra tools
