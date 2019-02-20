@@ -115,7 +115,8 @@ PRODUCT_PACKAGES += \
     LatinIME \
     BluetoothExt \
     Launcher3Dark \
-    OmniJaws
+    OmniJaws \
+    Phonograph
 
 # Extra tools
 PRODUCT_PACKAGES += \
