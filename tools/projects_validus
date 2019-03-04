@@ -521,7 +521,6 @@ platform/packages/providers/PartnerBookmarksProvider
 platform/packages/providers/TelephonyProvider
 platform/packages/providers/TvProvider
 platform/packages/providers/UserDictionaryProvider
-LineageOS/android_packages_resources_devicesettings
 platform/packages/screensavers/Basic
 platform/packages/screensavers/PhotoTable
 platform/packages/screensavers/WebView
@@ -543,7 +542,6 @@ platform/prebuilts/checkcolor
 platform/prebuilts/checkstyle
 platform/prebuilts/clang-tools
 platform/prebuilts/clang/host/darwin-x86
-AOSiP/platform_prebuilts_clang_host_linux-x86
 platform/prebuilts/deqp
 platform/prebuilts/devtools
 platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9

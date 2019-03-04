@@ -1,279 +1,190 @@
 ====================
-     02-10-2019
+     03-04-2019
 ====================
 
 
-project build/make/
-11df3e2  envi: changelog generation added  [Alx31]
-project packages/apps/Settings/
-c2c8f0d  ChangeLog: hotlink to CL generated in vendor  [Alx31]
-project vendor/validus/
-f268d17  vendor_validus: add omnijaws permissions  [Alx31]
-f13b757  vendor_validus:add projects list  [Alx31]
-9804769  changelog_validus: more info and bling  [Alx31]
-8981565  script: generate changelog for last 15days  [Alx31]
-cf11d5e  backuptool: Support system-as-root A-only backuptool  [Alx31]
-343e5db  ValidusOS: TEST: 4.0  [Alx31]
-61fbeb6  common.mk: build omnijaws plz  [Alx31]
+   * frameworks/base/
+2d9295f70fa  Powermenu: Allow emergency dialer button to be themed with accent color  [martinusbe]
+dd22c0adc1b  Emergency dial fix for Marty :D  [martinusbe]
+2eda98e931e  Fix action bar font family on material themes  [martinusbe]
+5fe85711f31  UiModeManagerService: Store messaging night state on Settings class  [martinusbe]
+b949b370a74  Themes: Lock day night mode  [martinusbe]
+57b59ab67e5  Themes: Fix animation issue when opening Messaging app  [martinusbe]
+e55f0e78aaa  Themes: Workaround to fix dark theme on Messaging app  [martinusbe]
+9bfc65f0f51  Migrate SystemUI Tuner to WolvesDen  [martinusbe]
+eb2dc9ef517  base: Add a toggle for Emergency dialing in power menu (1/2)  [martinusbe]
+4949a15f0c5  BrightnessDialog: dismiss on focus lost  [martinusbe]
+589bf9c1fe5  GlobalActions: avoid multiple power dialog animations  [martinusbe]
+a395096f400  VolumeDialog: avoid multiple animations on touch spam  [martinusbe]
+0fce7e7dc0b  ActionUtils: Improve ringer modes  [martinusbe]
+4cb31920100  ActionUtils: Ringer modes  [martinusbe]
+0eba2bce538  ActionUtils: cleanup screen On action code  [martinusbe]
+8a8f6c7cc2a  ActionUtils: Add screen on action  [martinusbe]
+fd3a9a640dd  base: Add support for the .opus file format  [martinusbe]
+36ad2c48af7  {CRAP} fix for OP ims.apk  [martinusbe]
+d74f3102a2f  Fix showing empty signal strength for TD-SCDMA  [martinusbe]
+4d6673c8dfa  FontService: Disable logspam  [martinusbe]
+db66a11b61d  base: FontService: Add a error for non-supported font packages  [martinusbe]
+eb6dfb73822  Forward port Screen Security settings (1/2)  [Alx31]
+   * manifest/
+afcbf7e  validus: track vold test  [martinusbe]
+   * packages/apps/WolvesDen/
+c264eac2  Powermenu: Use SecureSettingSwitch for emergency dialer  [alliancesparx]
+   * vendor/validus/
+d42597e  bump to 4.0  [Alx31]
+bebabb6  envsetup: Add new eat command  [Alx31]
+3cd9641  fonts: Add Audiowide for ZeroKool  [Alx31]
+a6371ae  Phonograph returns  [Alx31]
+b2558a2  devices: fajita  [Alx31]
+5882c75  changelog: generate.  [Alx31]
+2b9b033  vendor_validus: add omnijaws permissions  [Alx31]
+a83a8d0  vendor_validus:add    *s list  [Alx31]
+fec3cf2  changelog_validus: more info and bling  [Alx31]
+c1f1f0d  script: generate changelog for last 15days  [Alx31]
+dff2671  common.mk: build omnijaws plz  [Alx31]
 ====================
-     02-09-2019
-====================
-
-
-project build/make/
-3915551  build: Support system-as-root A-only backuptool  [martinusbe]
-project device/gzosp/sepolicy/
-0c9d8aa  sepolicy: Allow vold to exec sgdisk  [martinusbe]
-9ea1755  sepolicy: Improve external storage rules  [martinusbe]
-5b34ff8  sepol: Remove exfat context and set sdFAT to exFAT  [martinusbe]
-f03656d  Make fuseblk use vfat context  [martinusbe]
-26b8ff1  common: Remove stale ntfs genfscon policy  [martinusbe]
-a425ce6  Revert "Remove duplicated genfscon"  [martinusbe]
-0f12245  Revert "sepolicy: suppress denial logspam"  [martinusbe]
-7a2c869  Allow recovery write to sysfs_graphics  [martinusbe]
-d7f0843  recovery: Use r_dir_file macro  [martinusbe]
-f9de5c9  sepolicy: recovery: Allow reading battery and usb status  [martinusbe]
-51b18c8  qcom: Allow fsck to check /persist  [martinusbe]
-84e0574  sepolicy: adapt sudaemon policy for O  [martinusbe]
-da82144  sepolicy: Clean up su policy for N  [martinusbe]
-d239e0b  sepolicy: allow kernel to read storage  [martinusbe]
-ecdd406  sepolicy: fix denial for sudaemon  [martinusbe]
-00f524a  sepolicy: Make superuser_device and sudaemon mlstrustedobjects  [martinusbe]
-99b42a6  sepolicy: remove sudaemon type declaration  [martinusbe]
-34aa0e7  sepolicy: Add policies for the new superuser sockets.  [martinusbe]
-3fc2254  selinux: Workaround for devices with PR_SET_NO_NEW_PRIVS enforcement  [martinusbe]
-e114ad8  SELinux: su: Remove extra quote in a comment  [martinusbe]
-bd65311  Add selinux policies for superuser  [martinusbe]
-050633b  Make A/B backuptool permissive  [martinusbe]
-project frameworks/base/
-47efe07  Support for device specific key handlers  [hardwareadictos]
-7ca9eeb  fw/b: Define paths for device specific KeyHandler Libs  [hardwareadictos]
-project manifest/
-96fbf99  oops  [martinusbe]
-7a53e31  temp:validus: add device_gzosp_sepolicy in test branch  [martinusbe]
-0bc46a1  validus: move system sepolicy to a test branch  [martinusbe]
-project system/sepolicy/
-1ab7644  Add missing pm.* properties in property_contexts  [martinusbe]
-9940212  Allow fsck_untrusted to getattr block_device  [martinusbe]
-fbec811  sepolicy: create rules for system properties  [martinusbe]
-24c0aab  Allow dnsmasq to getattr netd unix_stream_socket  [martinusbe]
-13f60c8  Use LOCAL_ADDITIONAL_M4DEFS for file_contexts  [martinusbe]
-ffd63c0  Allow init to chmod/chown /proc/slabinfo  [martinusbe]
-2c323cf  Allow init to write to /proc/cpu/alignment  [martinusbe]
-7808199  Allow mediaserver to read device directories  [martinusbe]
-ae27a1a  Fix issue that ro.telephony.default_network can't be read per slot  [martinusbe]
-f0076fc  Build sepolicy tools with Android.bp.  [martinusbe]
-6aa09cc  sepolicy: Grant mediaextractor access to files over all sdcard fs types  [martinusbe]
-e200559  sepolicy: Add rules for sudaemon  [martinusbe]
-97a477e  Substratum: Pie sepolicy bringup  [martinusbe]
-project system/update_engine/
-4b70ce6  Android: Reset update progress when booted into new version.  [martinusbe]
-4ba77f6  update_engine: Fallback to partition without suffix  [martinusbe]
-43e926f  update_engine: Transition to backuptool domain  [martinusbe]
-====================
-     02-08-2019
+     03-03-2019
 ====================
 
 
+   * packages/apps/Settings/
+5e5b897566  Merge branch 'test' of https://github.com/ValidusOs/packages_apps_Settings into HEAD  [martinusbe]
+b2367bf834  Battery temp: Use MCC to determine the scale type  [martinusbe]
+1da19f1b47  Battery temp: Ensure preference is updated  [martinusbe]
+84787f0c37  Battery stats: Display battery temperature  [martinusbe]
+030ccaf408  Open advanced power usage summary on header click of battery  [martinusbe]
 ====================
-     02-07-2019
+     03-02-2019
+====================
+
+
+   * packages/apps/Settings/
+5bfa52fbe0  Fix display settings fc Caused by removing font preference - my bad  [alliancesparx]
+67875d911b  Themes: Remove preference - fix my derp  [alliancesparx]
+   * packages/apps/WolvesDen/
+b4190444  wolvesden: Add a toggle for Emergency dialing in power menu (2/2)  [martinusbe]
+====================
+     03-01-2019
+====================
+
+
+   * hardware/qcom/keymaster/
+f461ab8  keymaster: Use generated kernel headers  [martinusbe]
+   * packages/apps/WolvesDen/
+185afcf5  Migrate SystemUI Tuner to WolvesDen  [alliancesparx]
+====================
+     02-28-2019
+====================
+
+
+   * build/make/
+f44a90019  core: Pass HW FDE flags to soong  [martinusbe]
+   * hardware/interfaces/
+f4ff5fff  keymasterV4_0: Tags support for FBE wrapped key.  [martinusbe]
+   * packages/apps/Settings/
+c811e6b9ad  Themes: Remove preference It's moved to WolvesDen  [alliancesparx]
+e18df0c1d0  Fonts: Disable preference It's moved to WolvesDen  [alliancesparx]
+243e21e16f  Forward port pattern visibility settings (2/2)  [martinusbe]
+====================
+     02-27-2019
+====================
+
+
+   * hardware/gzosp/interfaces/
+be4d744  aw2013: lets not crash service on missing LED  [martin coulon]
+7835816  light: aw2013: Mark as shutdown critical  [martin coulon]
+   * packages/apps/Settings/
+8c41843cee  Settings: forward port lock pattern grid size (2/2)  [martinusbe]
+====================
+     02-26-2019
+====================
+
+
+   * frameworks/base/
+78086c96b35  DefaultPermissionGrantPolicy: grant Google sounds picker storage perms  [martinusbe]
+1e4d12721f5  SystemUpdateService: enable service but lock its receivers  [martinusbe]
+3edd3026df7  PackageManager: allow build-time disabling of components  [martinusbe]
+   * packages/services/OmniJaws/
+a9ba04d  Weather: Set OWM as default provider  [alliancesparx]
+====================
+     02-25-2019
+====================
+
+
+   * frameworks/base/
+12c68f8e293  Reload more assets on overlay change  [martinusbe]
+   * packages/apps/WolvesDen/
+5994d15b  WolvesDen: Overhaul pt2 Remove unused tabs Add styles tab Move device theme and foonts from settings to Style  [alliancesparx]
+dafded58  Theme tab indicator with accent color  [alliancesparx]
+====================
+     02-24-2019
 ====================
 
 
 ====================
-     02-06-2019
+     02-23-2019
 ====================
 
 
-project frameworks/base/
-cbfa5b2  Add back weather qs tile  [alliancesparx]
-project packages/apps/Settings/
-00e2dd9  Manifest: Update path to OmniJawsSettings  [alliancesparx]
-project packages/apps/WolvesDen/
-54949b3  Weather: Combine settings to one pref  [alliancesparx]
 ====================
-     02-05-2019
+     02-22-2019
 ====================
 
 
-project frameworks/base/
-cfa16e0  [2/2] SettingsLib: switch style to removed left padding  [martinusbe]
-6132fc5  [1/2] SettingsLib: allow to remove forced start margin  [martinusbe]
-3bce7e9  UpdateSettings merge and tile removal  [martinusbe]
-153f15e  fix derps  [martinusbe]
-f2d432e  fix derps  [martinusbe]
-681a711  fix a white line  [martinusbe]
-e579775  base: SystemUI: fix keyguard weather color update  [martinusbe]
-a4260fa  base: SystemUI: keyguard weather view - fix initial kick off after boot  [martinusbe]
-c6e6b53  base: SystemUI: hide keyguard weather when pulsing  [martinusbe]
-2a96f51  [1/3] base: SystemUI: keyguard weather view  [martinusbe]
-23dae10  [1/3] base: add back weather parts  [martinusbe]
-project manifest/
-2ad4680  Track WeatherClient  [alliancesparx]
-a00321c  track again omnijaws  [GitHub]
-project packages/apps/Settings/
-4c62886  [1/2] Settings: change dimen to removed left padding  [martinusbe]
-7127583  [2/2] Settings: allow to remove forced start margin  [martinusbe]
-f5ba403  swipe up: disable full gesture for now  [martinusbe]
-312a304  fix derps  [alliancesparx]
-087e68e  fix typos  [alliancesparx]
-786b4b1  Settings: export OmniJaws settings activity  [alliancesparx]
-49e7b5b  [3/3] Settings: keyguard weather view  [alliancesparx]
-2d5d1ff  [3/3] Settings: add back weather parts  [alliancesparx]
-project packages/apps/WolvesDen/
-51f6910  weather: make omnijaws_settings.xml complete  [martinusbe]
-f97ec03  weather: switch to our SecureSettingListPreference  [martinusbe]
-f0500f2  wolvesden:: add our SecureSettingListPreference  [martinusbe]
-93f2353  OmniGears: fix my derps  [martinusbe]
-4aab55c  lockscreenitems: this is val  [martinusbe]
-9033d37  [2/3] OmniGears: keyguard weather view  [martinusbe]
-cb3e61d  [2/3] OmniGears: add back weather parts  [martinusbe]
+   * frameworks/base/
+71cac4fa822  fonts: Build different fonts.xml if EXCLUDE_SERIF_FONTS is true  [martinusbe]
+24ad7e42079  Camera: Force HAL1 for predefined package list.  [martinusbe]
+eb3f5029d7f  Informing app idle listeners on enabled state changes.  [martinusbe]
+ce1ae1997f4  Fix for CTS testAllowWhileIdleJobInTempwhitelist  [martinusbe]
+cbe10a98138  Null locale causing the VTS fail.  [martinusbe]
+   * packages/services/Telephony/
+687d2e963  set config_enabled_lte to true by default  [martinusbe]
 ====================
-     02-04-2019
+     02-21-2019
 ====================
 
 
-project frameworks/base/
-9c8fc00  Allow devices to configure the blanking delay on displays  [martinusbe]
-86f06ce  Enable Binder Proxy Tracking by Uid only on eng builds  [martinusbe]
-beb926c  audio: Don't play sound effects if stream is muted  [martinusbe]
-2301023  InputMethodManager: Fixed memory leak when windowDismissed  [martinusbe]
-df3ccf2  Refusing to enter PIP mode when activity destroyed  [martinusbe]
-787d688  SystemUI: Fixes context for tiles without longClick  [martinusbe]
-fc6d634  am: Fix top activity resume with secure keyguard  [martinusbe]
-a72ede4  Fix intermittent slowness in resolver activity towards end of day  [martinusbe]
-f259257  WindowManager: Remove unused calling for better performance  [martinusbe]
-ef4735a  Fix the behavior of keyguard bouncer in a corner case  [martinusbe]
-eacbbc1  Fix disappearing home/recents button  [martinusbe]
-project packages/apps/Settings/
-dec253f  Fix multi-sim dialog in RTL  [martinusbe]
-project prebuilts/clang/host/linux-x86/
-806a8f8  Update prebuilt Clang to r349610.  [Harsh Shandilya]
+   * frameworks/base/
+2d9740d7b70  Add Music QS Tile  [alliancesparx]
+   * manifest/
+7f493ca  Manifest: Track Phonograph  [alliancesparx]
 ====================
-     02-03-2019
+     02-20-2019
 ====================
 
 
-project frameworks/base/
-285b7b1  Disable notification channel warnings by default [1/2]  [martinusbe]
-adb2fe4  [DNM into 9.0]Utils: Introduce method to determine countries that use Fahrenheit  [martinusbe]
-10c31fc  Utils: Add method to determine battery temp  [martinusbe]
-project packages/apps/Launcher3/
-a4315a9  quickstep: add required permissions  [martinusbe]
-project packages/apps/Settings/
-6fd8302  Disable notification channel warnings by default [2/2]  [martinusbe]
-project packages/services/OmniJaws/
-8af8929  OmniJaws: Set defaults for Ambient Weather  [Alx31]
-bf35806  OmniJaws: Allow using custom API key  [Alx31]
-a0f4b38  OmniJaws: add missing key resources  [Alx31]
+   * frameworks/base/
+c3105f6046e  Extend reboot tile to add power off  [alliancesparx]
+9364f78b218  RebootTile: Fix gradient message display for reboot to recovery  [alliancesparx]
+f1d42d4b724  Add Reboot/Recovery QS Tile  [alliancesparx]
+67bbe4cfbc6  Status bar clock/date customizations [1/2]  [alliancesparx]
+   * packages/apps/WolvesDen/
+e6860e89  Status bar clock/date customizations [2/2]  [alliancesparx]
 ====================
-     02-02-2019
+     02-19-2019
 ====================
 
 
-project manifest/
-41b55dc  manifest: validus: track launcher3  [martinusbe]
-project packages/apps/Launcher3/
-f3252c7  Revert "Revert "Set a toggle to show Search bar on first screen""  [martinusbe]
-76ced11  Fix theme glitches with system automatic light/dark theme  [martinusbe]
-8566be7  Fix hotseat search when google feed is disabled  [martinusbe]
-20ff9af  Gestures: Add more actions  [martinusbe]
-85feb13  Launcher3: Hide apps activity improvements  [martinusbe]
-1447cdf  Launcher3: Unify resources and improve whitespace consistency  [martinusbe]
-c3327f0  Notification gesture: use our ActionUtils  [martinusbe]
-7fa1ec8  Categories: Better strings  [martinusbe]
-cb9eff6  Set proper authority for AppSearchProvider  [martinusbe]
-4bf4882  Hide drag arrow  [martinusbe]
-cca5395  Fix hide apps menu glitches  [martinusbe]
-f8a3411  Disable top qsb flag  [martinusbe]
-6decec0  Revert "Set a toggle to show Search bar on first screen"  [martinusbe]
-7dfa2a1  Don't call swipe down action when swiping horizontally  [martinusbe]
-76ce7e5  Make dark qsb darker and remove ripple effect on qsb tap  [martinusbe]
-d10d666  Remove the hint text from bottom search bar  [martinusbe]
-66495b6  Theme also app drawer search bar within system theme  [martinusbe]
-bb41b7a  Use a dark bottom search bar if system dark theme is set  [martinusbe]
-0cf49a1  Add Qsb to hotseat and all apps view  [martinusbe]
-1860854  Add updated Google Feed lib from Pixel 3 launcher  [martinusbe]
-15e6281  Revert "Add SearchLauncher target"  [martinusbe]
-7ede979  Move actions into is own class [2/2]  [martinusbe]
-d412b86  Add Google search double tap option  [martinusbe]
-c897dd4  Add Google ActionServices (MatchmakerPrebuilt) to blacklisted apps  [martinusbe]
-015e06a  Elevate to 'core/platform' app'  [martinusbe]
+   * manifest/
+72ddfd8  manifest: android-9.0.0_r31  [alliancesparx]
 ====================
-     02-01-2019
-====================
-
-project art/
-6365d8d  Revert "Assume all x86/x86_64 hosts support at least sse4.x/popcount."  [martinusbe]
-ece50be  Pause GC during deoptimization work  [martinusbe]
-====================
-     01-31-2019
+     02-18-2019
 ====================
 
 
-project frameworks/base/
-ec7e6f3  import DU ActionUtils.java  [martinusbe]
-1fb7dca  Full gesture navbar: fix swipe to back glitches  [martinusbe]
-====================
-     01-30-2019
-====================
-
-
-project vendor/validus/
-0b14d36  disable the subs apk for now  [martinusbe]
-fdafbbb  substratum: exclude SubstratumKey.apk from dexpreopt  [martinusbe]
-da4e9c8  susbtstratum: make the SubstratumKey.apk actually work  [martinusbe]
-====================
-     01-29-2019
-====================
-
-
-project build/make/
-c0f14ae  build: Introduce SubstratumHelperService  [Nick van Bokhorst]
-project frameworks/base/
-7789c47  OMS: handle target or overlay package disabled  [Nick van Bokhorst]
-a26b646  OMS: try harder not to update assets if nothing changed  [Nick van Bokhorst]
-5424002  SubstratumService: Rewrite installation method for Pie InstallSession API  [Nick van Bokhorst]
-57be0a2  Unbreak public api by hiding substratum interfaces  [Nick van Bokhorst]
-4852e93  Pie OMS: allow non-system overlays from Substratum  [Nick van Bokhorst]
-1275353  SubstratumService: Refactor & cleanup according to AOSP conventions  [Nick van Bokhorst]
-57960da  base: modify/define custom overlay management  [Nick van Bokhorst]
-3b43eb5  SubstratumService: unify permissions  [Nick van Bokhorst]
-7d60def  SubstratumService: allow CHANGE_OVERLAY_PACKAGES permission  [Nick van Bokhorst]
-8e2dfc8  base: Introduce SubstratumService  [Nick van Bokhorst]
-f8983f3  OMS: StrictMode and files under /data/system/theme/  [Nick van Bokhorst]
-b5d9f54  Hold "volume up" during boot to disable all overlays  [Nick van Bokhorst]
-3f877b3  ThemeSafety: Introduce App Crash Intent  [Nick van Bokhorst]
-8c5d408  ApplicationsState: add filter for Substratum overlays [2/2]  [Nick van Bokhorst]
-74925af  Extras: Add dynamic theme sound effects support  [Nick van Bokhorst]
-509b12d  Extras: Add dynamic theme shutdown and boot animation support  [Nick van Bokhorst]
-project manifest/
-fcee38f  manifest: track FM repo's  [Nick van Bokhorst]
-b336869  manifest: track test branch for build  [Nick van Bokhorst]
-project packages/apps/Settings/
-17c3108  Settings: Introduce Substratum changes.  [Nick van Bokhorst]
-project vendor/validus/
-550d920  vendor: add & build SubstratumKey  [Nick van Bokhorst]
-====================
-     01-28-2019
-====================
-
-
-project packages/services/OmniJaws/
-0bb761f  add Validus own OWM api key  [Alx31]
-====================
-     01-27-2019
-====================
-
-
-project hardware/qcom/audio-caf/msm8996/
-0323352  Merge branch '9.0-caf-8996' of https://github.com/Martinusbe/android_hardware_qcom_audio into HEAD  [martinusbe]
-project hardware/qcom/display-caf/msm8996/
-2446c67  Merge branch '9.0-caf-8996' of https://github.com/Martinusbe/android_hardware_qcom_display into HEAD  [martinusbe]
-project manifest/
-3c90a82  manifest: track DSPManager  [hardwareadictos]
-5e22bb8  manifest: track hadware_interfaces test branch on test  [hardwareadictos]
-933b730  Track JamesDSP  [hardwareadictos]
-project vendor/validus/
-f40308b  vendor: build DSPManager  [hardwareadictos]
-c631729   vendor: validus: build JamesDSP  [hardwareadictos]
+   * build/make/
+e31c88ee2  envi: changelog generation added  [alliancesparx]
+   * packages/apps/Settings/
+3ff938aa2b  ChangeLog: hotlink to CL generated in vendor  [alliancesparx]
+5c977ed1bb  Manifest: Update path to OmniJawsSettings  [alliancesparx]
+f4d715bfa9  [1/2] Settings: change dimen to removed left padding  [alliancesparx]
+791fe67fa4  [2/2] Settings: allow to remove forced start margin  [alliancesparx]
+9d1fae8383  swipe up: disable full gesture for now  [alliancesparx]
+f22741ee17  fix derps  [alliancesparx]
+e0ab3e4e8b  fix typos  [alliancesparx]
+151a4b6761  Settings: export OmniJaws settings activity  [alliancesparx]
+86654daf3d  [3/3] Settings: keyguard weather view  [alliancesparx]
+a4a12c366c  [3/3] Settings: add back weather parts  [alliancesparx]
+   * system/sepolicy/
+17781bf7  Merge pull request #2 from ValidusOs/test  [GitHub]
+2dd7ecb0  Substratum: Pie sepolicy bringup  [alliancesparx]
