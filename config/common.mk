@@ -102,12 +102,12 @@ PRODUCT_PACKAGES += \
     AudioFX
 
 # DSPManager
-PRODUCT_PACKAGES += \
-    DSPManager
+#PRODUCT_PACKAGES += \
+#   DSPManager
     
 # JamesDSP
-PRODUCT_PACKAGES += \
-   libjamesdsp    
+#PRODUCT_PACKAGES += \
+#   libjamesdsp    
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
