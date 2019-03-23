@@ -3,10 +3,10 @@
 #    BOARD_HAL_STATIC_LIBRARIES := libhealthd.cm
 #endif
 
-include vendor/validus/config/BoardConfigKernel.mk
+include vendor/aosep/config/BoardConfigKernel.mk
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-include vendor/validus/config/BoardConfigQcom.mk
+include vendor/aosep/config/BoardConfigQcom.mk
 endif
 
-include vendor/validus/config/BoardConfigSoong.mk
+include vendor/aosep/config/BoardConfigSoong.mk
