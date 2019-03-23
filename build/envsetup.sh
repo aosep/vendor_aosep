@@ -39,7 +39,7 @@ function aosep_device_combos()
 
 function aosep_rename_function()
 {
-    eval "original__ aosep$(declare -f ${1})"
+    eval "original__aosep$(declare -f ${1})"
 }
 
 function _aosep_build_hmm() #hidden
@@ -47,25 +47,25 @@ function _aosep_build_hmm() #hidden
     printf "%-8s %s" "${1}:" "${2}"
 }
 
-function  aosep_append_hmm()
+function aosep_append_hmm()
 {
-    HMM_DESCRIPTIVE=("${HMM_DESCRIPTIVE[@]}" "$(_ aosep_build_hmm "$1" "$2")")
+    HMM_DESCRIPTIVE=("${HMM_DESCRIPTIVE[@]}" "$(_aosep_build_hmm "$1" "$2")")
 }
 
-function  aosep_add_hmm_entry()
+function aosep_add_hmm_entry()
 {
     for c in ${!HMM_DESCRIPTIVE[*]}
     do
         if [[ "${1}" == $(echo "${HMM_DESCRIPTIVE[$c]}" | cut -f1 -d":") ]]
         then
-            HMM_DESCRIPTIVE[${c}]="$(_ aosep_build_hmm "$1" "$2")"
+            HMM_DESCRIPTIVE[${c}]="$(_aosep_build_hmm "$1" "$2")"
             return
         fi
     done
-     aosep_append_hmm "$1" "$2"
+    aosep_append_hmm "$1" "$2"
 }
 
-function  aosepremote()
+function aosepremote()
 {
     local proj pfx project
 
@@ -74,7 +74,7 @@ function  aosepremote()
         echo "Not in a git directory. Please run this from an Android repository you wish to set up."
         return
     fi
-    git remote rm  aosep 2> /dev/null
+    git remote rm aosep 2> /dev/null
 
     proj="$(pwd -P | sed "s#$ANDROID_BUILD_TOP/##g")"
 
@@ -84,7 +84,7 @@ function  aosepremote()
 
     project="${proj//\//_}"
 
-    git remote add  aosep "git@github.com:aosep/$pfx$project"
+    git remote add aosep "git@github.com:aosep/$pfx$project"
     echo "Remote 'aosep' created"
 }
 
@@ -145,7 +145,7 @@ function cafremote()
     echo "Remote 'caf' created"
 }
 
-function aose[p_push()
+function aosep_push()
 {
     local branch ssh_name path_opt proj
     branch="lp5.1"
