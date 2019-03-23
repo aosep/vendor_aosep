@@ -41,12 +41,12 @@ except ImportError:
     urllib.request = urllib2
 
 DEBUG = False
-default_manifest = ".repo/manifests/validus_default.xml"
-custom_local_manifest = ".repo/local_manifests/validus_manifest.xml"
-custom_default_revision = "8.1"
-custom_dependencies = "validus.dependencies"
-org_manifest = "ValidusOs-Devices"  # leave empty if org is provided in manifest
-org_display = "ValidusOs-Devices"  # needed for displaying
+default_manifest = ".repo/manifests/aosep_default.xml"
+custom_local_manifest = ".repo/local_manifests/aosep_manifest.xml"
+custom_default_revision = "9.0"
+custom_dependencies = "aosep.dependencies"
+org_manifest = "aosep-Devices"  # leave empty if org is provided in manifest
+org_display = "aosep-Devices"  # needed for displaying
 
 github_auth = None
 
