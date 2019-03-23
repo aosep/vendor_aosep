@@ -1,6 +1,6 @@
 bootstrap_go_package {
-    name: "soong-validus",
-    pkgPath: "validus/soong/android",
+    name: "soong-aosep",
+    pkgPath: "aosep/soong/android",
     srcs: [
         "android/variable.go",
     ],
