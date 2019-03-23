@@ -20,37 +20,37 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Backup tool
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/validus/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/validus/prebuilt/common/bin/50-validus.sh:system/addon.d/50-validus.sh \
-    vendor/validus/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+    vendor/aosep/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/aosep/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/aosep/prebuilt/common/bin/50-validus.sh:system/addon.d/50-validus.sh \
+    vendor/aosep/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/validus/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/validus/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+    vendor/aosep/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/aosep/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/aosep/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
 # Backup services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/validus/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/aosep/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
+    vendor/aosep/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
-# Validus-specific init file
+# aosep-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/etc/init.local.rc:root/init.validus.rc
+    vendor/aosep/prebuilt/common/etc/init.local.rc:root/init.aosep.rc
 
 # Copy LatinIME for gesture typing
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
-
+    vendor/aosep/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+    
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+    vendor/aosep/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -58,25 +58,25 @@ PRODUCT_COPY_FILES += \
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
-    vendor/validus/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
+    vendor/aosep/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
+    vendor/aosep/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
 # Fix Dialer
 #PRODUCT_COPY_FILES +=  \
-#    vendor/validus/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+#    vendor/aosep/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/etc/permissions/privapp-permissions-omnijaws.xml:system/etc/permissions/privapp-permissions-omnijaws.xml
+    vendor/aosep/prebuilt/common/etc/permissions/privapp-permissions-omnijaws.xml:system/etc/permissions/privapp-permissions-omnijaws.xml
 
 # Fonts packages
 PRODUCT_PACKAGES += \
-    validus-fonts
+    aosep-fonts
     
-# Validus-specific startup services
+# aosep-specific startup services
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/validus/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/validus/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/aosep/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/aosep/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
+    vendor/aosep/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Required packages
 PRODUCT_PACKAGES += \
@@ -154,7 +154,7 @@ PRODUCT_PACKAGES += \
     AndroidDarkThemeOverlay \
     SettingsDarkThemeOverlay
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/validus/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/aosep/overlay/common
 
 # Boot animation include
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
@@ -168,7 +168,7 @@ TARGET_BOOTANIMATION_SIZE := $(shell \
   fi )
 
 # get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/validus/prebuilt/common/bootanimation))
+bootanimation_sizes := $(subst .zip,, $(shell ls vendor/aosep/prebuilt/common/bootanimation))
 bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
 
 # find the appropriate size and set
@@ -186,42 +186,42 @@ $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size
 
 ifeq ($(TARGET_BOOTANIMATION_HALF_RES),true)
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+    vendor/aosep/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 else
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+    vendor/aosep/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 endif
 endif
 
 # Versioning System
-# validus first version.
+# aosep first version.
 PRODUCT_VERSION_MAJOR = 9
 PRODUCT_VERSION_MINOR = Beta
 PRODUCT_VERSION_MAINTENANCE = 4.0
-VALIDUS_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
-ifdef VALIDUS_BUILD_EXTRA
-    VALIDUS_POSTFIX := -$(VALIDUS_BUILD_EXTRA)
+aosep_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+ifdef aosep_BUILD_EXTRA
+    aosep_POSTFIX := -$(aosep_BUILD_EXTRA)
 endif
 
-ifndef VALIDUS_BUILD_TYPE
-    VALIDUS_BUILD_TYPE := UNOFFICIAL
+ifndef aosep_BUILD_TYPE
+    aosep_BUILD_TYPE := UNOFFICIAL
 endif
 
 # Set all versions
-VALIDUS_VERSION := Validus-$(VALIDUS_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(VALIDUS_BUILD_TYPE)$(VALIDUS_POSTFIX)
-VALIDUS_MOD_VERSION := Validus-$(VALIDUS_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(VALIDUS_BUILD_TYPE)$(VALIDUS_POSTFIX)
+aosep_VERSION := aosep-$(aosep_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(aosep_BUILD_TYPE)$(aosep_POSTFIX)
+aosep_MOD_VERSION := aosep-$(aosep_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(aosep_BUILD_TYPE)$(aosep_POSTFIX)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    validus.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
-    ro.validus.version=$(VALIDUS_VERSION) \
-    ro.modversion=$(VALIDUS_MOD_VERSION) \
-    ro.validus.buildtype=$(VALIDUS_BUILD_TYPE)
+    aosep.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+    ro.aosep.version=$(aosep_VERSION) \
+    ro.modversion=$(aosep_MOD_VERSION) \
+    ro.aosep.buildtype=$(aosep_BUILD_TYPE)
 
 # Google sounds
-include vendor/validus/google/GoogleAudio.mk
+include vendor/aosep/google/GoogleAudio.mk
 
-EXTENDED_POST_PROCESS_PROPS := vendor/validus/tools/validus_process_props.py
+EXTENDED_POST_PROCESS_PROPS := vendor/aosep/tools/aosep_process_props.py
 
 # Themes
-include vendor/validus/config/themes.mk
+include vendor/aosep/config/themes.mk
