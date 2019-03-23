@@ -13,9 +13,9 @@
 # limitations under the License.
 
 $(call inherit-product, build/target/product/aosp_arm64.mk)
-$(call inherit-product, vendor/validus/config/common.mk)
+$(call inherit-product, vendor/aosep/config/common.mk)
 
 # Allow building otatools
 TARGET_FORCE_OTA_PACKAGE := true
 
-PRODUCT_NAME := validus_arm64
+PRODUCT_NAME := aosep_arm64
