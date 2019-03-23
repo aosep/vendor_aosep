@@ -1,5 +1,5 @@
 # Bring in Qualcomm helper macros
-include vendor/validus/build/core/qcom_utils.mk
+include vendor/aosep/build/core/qcom_utils.mk
 
 # Populate the qcom hardware variants in the project pathmap.
 define ril-set-path-variant
