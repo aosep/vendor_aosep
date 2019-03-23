@@ -42,7 +42,7 @@ function aosep_rename_function()
     eval "original__ aosep$(declare -f ${1})"
 }
 
-function _ aosep_build_hmm() #hidden
+function _aosep_build_hmm() #hidden
 {
     printf "%-8s %s" "${1}:" "${2}"
 }
