@@ -1,6 +1,6 @@
 # Inherit common stuff
-$(call inherit-product, vendor/validus/config/common.mk)
-$(call inherit-product, vendor/validus/config/common_apn.mk)
+$(call inherit-product, vendor/aosep/config/common.mk)
+$(call inherit-product, vendor/aosep/config/common_apn.mk)
 
 # Telephony 
 PRODUCT_PACKAGES += \
