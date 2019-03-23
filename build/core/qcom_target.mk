@@ -49,6 +49,7 @@ $(call project-set-path,qcom-display,hardware/qcom/display/$(TARGET_BOARD_PLATFO
 $(call project-set-path,qcom-media,hardware/qcom/media/$(TARGET_BOARD_PLATFORM))
 
 $(call project-set-path,qcom-camera,hardware/qcom/camera)
+$(call project-set-path,qcom-data-ipa-cfg-mgr,hardware/qcom/data/ipacfg-mgr)
 $(call project-set-path,qcom-gps,hardware/qcom/gps)
 $(call project-set-path,qcom-sensors,hardware/qcom/sensors)
 $(call project-set-path,qcom-loc-api,vendor/qcom/opensource/location)
