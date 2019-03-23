@@ -1,5 +1,5 @@
 # Bring in Mediatek helper macros
-include vendor/validus/build/core/mtk_utils.mk
+include vendor/aosep/build/core/mtk_utils.mk
 
 ifeq ($(BOARD_USES_MTK_HARDWARE),true)
     mtk_flags := -DMTK_HARDWARE
