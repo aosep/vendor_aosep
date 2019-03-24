@@ -23,7 +23,7 @@ bootstrap_go_package {
     pluginFor: ["soong_build"],
 }
 
-gzosp_generator {
+aosep_generator {
     name: "generated_kernel_includes",
 
     // The headers make command
