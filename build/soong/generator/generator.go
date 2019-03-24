@@ -219,7 +219,7 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 
 	// Glob dep_files property
 	for _, dep_file := range g.properties.Dep_files {
-		dep_file = aosep ExpandVariables(ctx, dep_file)
+		dep_file = aosepExpandVariables(ctx, dep_file)
 		globPath := filepath.Join(depRoot, dep_file)
 		paths, err := ctx.GlobWithDeps(globPath, nil)
 		if err != nil {
